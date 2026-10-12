@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="horizontal" android:gravity="top" android:layoutDirection="ltr">
+    <ImageView android:id="@+id/notification_brand"
+        android:layout_width="36dp" android:layout_height="36dp"
+        android:src="@mipmap/ic_launcher" android:contentDescription="Dahimail"
+        android:layout_marginEnd="10dp" />
+    <LinearLayout android:layout_width="0dp" android:layout_weight="1"
+        android:layout_height="wrap_content" android:orientation="vertical">
+        <TextView android:id="@+id/notification_sender"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.Material.Notification.Title"
+            android:textSize="14sp" android:textStyle="bold" android:includeFontPadding="false"
+            android:maxLines="1" android:ellipsize="end" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="2dp">
+            <ImageView android:id="@+id/notification_type_icon" android:layout_width="14dp" android:layout_height="14dp"
+                android:tint="@android:color/darker_gray" android:layout_marginEnd="4dp" android:importantForAccessibility="no" />
+            <TextView android:id="@+id/notification_category"
+                android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                android:textAppearance="@android:style/TextAppearance.Material.Notification.Info"
+                android:textSize="11sp" android:includeFontPadding="false"
+                android:maxLines="1" android:ellipsize="end" />
+        </LinearLayout>
+        <TextView android:id="@+id/notification_body"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.Material.Notification"
+            android:textSize="12sp" android:includeFontPadding="false"
+            android:maxLines="1" android:ellipsize="end" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:orientation="vertical" android:gravity="end" android:layout_marginStart="8dp">
+        <TextView android:id="@+id/notification_time" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.Material.Notification.Info"
+            android:textSize="10sp" android:maxLines="1" android:includeFontPadding="false" />
+        <ImageView android:id="@+id/notification_avatar"
+            android:layout_width="36dp" android:layout_height="36dp" android:layout_marginTop="3dp"
+            android:scaleType="centerCrop" android:importantForAccessibility="no" />
+    </LinearLayout>
+</LinearLayout>
